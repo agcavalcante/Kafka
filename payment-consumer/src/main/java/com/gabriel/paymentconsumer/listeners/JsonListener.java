@@ -14,6 +14,6 @@ public class JsonListener {
 
     @KafkaListener(topics = "payment-topic", groupId = "createGroup", containerFactory = "kafkaListenerContainerFactory")
     public void antiFraud(@Payload Payment payment) {
-        log.info("RECEBI ::: {}", payment.toString());
+        log.info("RECEBI O PAGAMENTO ::: {}", payment.toString());
     }
 }
